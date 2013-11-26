@@ -62,10 +62,20 @@
     assert(apath!=nil);
     return [NSKeyedArchiver archiveRootObject:self toFile:apath];
 }
+
 +(instancetype) entityFromFile:(NSString*) apath{
     assert(apath!=nil);
     return [NSKeyedUnarchiver unarchiveObjectWithFile:apath];
+}
 
+-(NSString *) description{
+	NSString* ret=[NSString stringWithFormat:@"%@ {\n",[self class]];
+	NSArray* keyArray=[self.propertyDic allKeys];
+	for(id key in keyArray){
+		ret=[ret stringByAppendingFormat:@"\t%@=%@,\n",key,[self.propertyDic objectForKey:key]];
+	}
+	ret=[ret stringByAppendingString:@"}"];
+	return ret;
 }
 @end
 
