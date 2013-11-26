@@ -20,6 +20,7 @@
     [super viewDidLoad];
     [self.requestManager requestHotelCityListWithCompletionBlock:^(YGResponse *responseObject) {
         self.cityList = responseObject.responseObj;
+        NSLog(@"%@",self.cityList);
     } failure:^(NSError *error)  {
         
     } checkVersion:NO];

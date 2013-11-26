@@ -116,7 +116,15 @@ YG_SETDEFINE(ConfirmationType);
 
 YG_GETDEFINE(hotelId);
 YG_SETDEFINE(HotelId);
-
+-(NSString *) description{
+	NSString* ret=[NSString stringWithFormat:@"%@ {\n",[self class]];
+	NSArray* keyArray=[self.propertyDic allKeys];
+	for(id key in keyArray){
+		ret=[ret stringByAppendingFormat:@"\t%@=%@,\n",key,[self.propertyDic objectForKey:key]];
+	}
+	ret=[ret stringByAppendingString:@"}"];
+	return ret;
+}
 @end
 
 @implementation YGOrderList
@@ -127,7 +135,15 @@ YG_SETDEFINE(OrderDetailResults);
 YG_GETDEFINE_BOOL_IS(HasNext);
 YG_SETDEFINE_BOOL(HasNext);
 
-
+-(NSString *) description{
+	NSString* ret=[NSString stringWithFormat:@"%@ {\n",[self class]];
+	NSArray* keyArray=[self.propertyDic allKeys];
+	for(id key in keyArray){
+		ret=[ret stringByAppendingFormat:@"\t%@=%@,\n",key,[self.propertyDic objectForKey:key]];
+	}
+	ret=[ret stringByAppendingString:@"}"];
+	return ret;
+}
 @end
 
 
@@ -145,6 +161,15 @@ YG_SETDEFINE_BOOL(Hot);
 YG_GETDEFINE(pinyin);
 YG_SETDEFINE(Pinyin);
 
+-(NSString *) description{
+	NSString* ret=[NSString stringWithFormat:@"%@ {\n",[self class]];
+	NSArray* keyArray=[self.propertyDic allKeys];
+	for(id key in keyArray){
+		ret=[ret stringByAppendingFormat:@"\t%@=%@,\n",key,[self.propertyDic objectForKey:key]];
+	}
+	ret=[ret stringByAppendingString:@"}"];
+	return ret;
+}
 @end
 
 
