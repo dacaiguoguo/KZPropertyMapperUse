@@ -31,6 +31,25 @@
         return op;\
 }
 
+#define YG_REQUEST_VALIDATION_NEEDCache(rmethodName, paserClass,dic,aCachePath) {\
+AFHTTPRequestOperation *op =  [self.requestManager GET:[YGBaseRequest urlStringByMethod:rmethodName] parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {\
+NSLog(@"%@\nsuccess:\n%@",[operation.request.URL absoluteString],operation.responseString);\
+YGResponse *response = nil;\
+paserClass *cityParse = [[paserClass alloc] init];\
+response = [cityParse parseFromJson:responseObject];\
+if ([response.result isEqualToString:YG_ERROR_CODE]) {\
+NSError* error=[NSError errorWithDomain:YG_SERVER_ERROR_DOMAIN code:YG_ERROR_CODE_INVALID_RESPONSE_EXCEPTION userInfo:@{@"message": [responseObject objectForKey:@"message"]}];\
+failure(error);\
+}\
+[response.responseObj entityToFile:[YGConfig cachePath:aCachePath]];\
+success(response);\
+} failure:^(AFHTTPRequestOperation *operation, NSError *error) {\
+NSLog(@"%@\nfailure:\n%@",[operation.request.URL absoluteString],operation.responseString);\
+failure(error);\
+}];\
+return op;\
+}
+
 
 @interface YGBaseRequest ()
 @property (nonatomic, retain) AFHTTPRequestOperationManager *requestManager;
@@ -61,6 +80,30 @@
     NSDictionary *dic = nil;
     isCheckVersion?dic = @{ @"checkVersion": @"true" }:0;
     YG_REQUEST_VALIDATION(@"hotel.getCities", YGCityListParse,dic);
+    YGResponse *d = [YGResponse new];
+    [d.responseObj entityToFile:[YGConfig cachePath:YGCachePathHotelList]];
+}
+
+- (id)requestHotelCityListWithCompletionBlock:(void (^)(YGResponse* responseObject))success failure:(void (^)(NSError *error))failure{
+    NSDictionary *dic = nil;
+    AFHTTPRequestOperation *op =  [self.requestManager GET:[YGBaseRequest urlStringByMethod:@"hotel.getCities"] parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@\nsuccess:\n%@",[operation.request.URL absoluteString],operation.responseString);
+        YGResponse *response = nil;
+        YGBaseParse *cityParse = [[YGBaseParse alloc] init];
+        response = [cityParse parseFromJson:responseObject];
+        if ([response.result isEqualToString:YG_ERROR_CODE]) {
+            NSError* error=[NSError errorWithDomain:YG_SERVER_ERROR_DOMAIN code:YG_ERROR_CODE_INVALID_RESPONSE_EXCEPTION userInfo:@{@"message": [responseObject objectForKey:@"message"]}];
+            failure(error);
+        }
+        if ([response.version isEqualToString:[YGConfig cacheVersion:YGCachePathHotelList]]) {
+            
+        }
+        success(response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@\nfailure:\n%@",[operation.request.URL absoluteString],operation.responseString);
+        failure(error);
+    }];
+    return op;
 }
 
 - (id)requestOrderListWithParameters:(NSDictionary *)param completionBlock:(void (^)(YGResponse* responseObject))success failure:(void (^)(NSError *error))failure{

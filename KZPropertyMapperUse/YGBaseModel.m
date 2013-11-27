@@ -58,7 +58,7 @@
     [coder encodeObject:self.propertyDic forKey:NSStringFromSelector(@selector(propertyDic))];
 }
 #pragma mark - writeToFile
--(BOOL) writeToFile:(NSString*) apath{
+-(BOOL) entityToFile:(NSString*) apath{
     assert(apath!=nil);
     return [NSKeyedArchiver archiveRootObject:self toFile:apath];
 }

@@ -11,5 +11,6 @@
 @interface YGResponse : NSObject
 @property (copy, nonatomic) NSString* result;
 @property (copy, nonatomic) NSString* message;
+@property (copy, nonatomic) NSString* version;
 @property (strong, nonatomic) id responseObj;
 @end

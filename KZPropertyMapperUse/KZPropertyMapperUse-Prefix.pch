@@ -19,5 +19,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIView+category.h"
-
+    #import "YGConfig.h"
 #endif

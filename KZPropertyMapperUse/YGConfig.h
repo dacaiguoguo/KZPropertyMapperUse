@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface YGConfig : NSObject
 
+typedef NS_ENUM(NSInteger, YGCachePath) {
+    YGCachePathHotelList
+};
+@interface YGConfig : NSObject
++ (NSString *)cachePath:(YGCachePath)aenum;
++ (NSString *)cacheVersion:(YGCachePath)aenum;
+@end
+
+@interface NSObject (write)
+-(BOOL)entityToFile:(NSString*) apath;
+@end
+
+@interface NSArray (write)
+-(BOOL)entityToFile:(NSString*) apath;
 @end

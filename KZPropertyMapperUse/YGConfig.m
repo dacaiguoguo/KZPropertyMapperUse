@@ -9,5 +9,33 @@
 #import "YGConfig.h"
 
 @implementation YGConfig
++ (NSString *)cachePath:(YGCachePath)aenum{
+    
+    return nil;
+}
+
++ (NSString *)cacheVersion:(YGCachePath)aenum{
+    
+    return nil;
+}
+
+
+@end
+
+@implementation NSObject (write)
+
+-(BOOL)entityToFile:(NSString*) apath{
+    
+    return NO;
+}
+
+@end
+
+@implementation NSArray (write)
+
+-(BOOL)entityToFile:(NSString*) apath{
+    
+    return [self writeToFile:apath atomically:YES];
+}
 
 @end
