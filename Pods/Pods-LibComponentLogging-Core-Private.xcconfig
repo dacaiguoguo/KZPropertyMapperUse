@@ -1,0 +1,5 @@
+#include "Pods-LibComponentLogging-Core.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/LibComponentLogging-Core" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/KZPropertyMapper" "${PODS_ROOT}/Headers/LibComponentLogging-Core" "${PODS_ROOT}/Headers/LibComponentLogging-NSLogger" "${PODS_ROOT}/Headers/MCUIColorUtils" "${PODS_ROOT}/Headers/NSLogger" "${PODS_ROOT}/Headers/RegexKitLite" "${PODS_ROOT}/Headers/TWSReleaseNotesView" "${PODS_ROOT}/Headers/uiview-frame-helpers"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

@@ -32,6 +32,7 @@
 		9DE7DBDD1841F29E00B64F0A /* YGConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7DBDC1841F29E00B64F0A /* YGConfig.m */; };
 		9DE7DBE51841F58B00B64F0A /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7DBE21841F58B00B64F0A /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9DE7DBE61841F58B00B64F0A /* SFHFLoginUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7DBE41841F58B00B64F0A /* SFHFLoginUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A89F8F0C186D1353006A48DA /* calendar.html in Resources */ = {isa = PBXBuildFile; fileRef = A89F8F0B186D1353006A48DA /* calendar.html */; };
 		A8A0471A183B00F400E96F52 /* UIView+category.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A04719183B00F400E96F52 /* UIView+category.m */; };
 		D940702EA15349A5B27A0CC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA5435488FA4D92BF62A939 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		9DE7DBE71842002E00B64F0A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9DE7DBE81842002E00B64F0A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9DE7DBE91842002E00B64F0A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		A89F8F0B186D1353006A48DA /* calendar.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = calendar.html; sourceTree = "<group>"; };
 		A8A04718183B00F400E96F52 /* UIView+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+category.h"; sourceTree = "<group>"; };
 		A8A04719183B00F400E96F52 /* UIView+category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+category.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 				9DE7DBE21841F58B00B64F0A /* SFHFKeychainUtils.m */,
 				9DE7DBE31841F58B00B64F0A /* SFHFLoginUtil.h */,
 				9DE7DBE41841F58B00B64F0A /* SFHFLoginUtil.m */,
+				A89F8F0B186D1353006A48DA /* calendar.html */,
 				9D5829BF182F8ECC009EB477 /* InfoPlist.strings */,
 				9D07C2C1183894F200BA111F /* 3-4我的酒店订单.png */,
 				9D5829F2182FC9E6009EB477 /* testOrderList.txt */,
@@ -325,6 +328,7 @@
 				9D5829C1182F8ECC009EB477 /* InfoPlist.strings in Resources */,
 				9D5829CA182F8ECC009EB477 /* Main.storyboard in Resources */,
 				9D07C2C2183894F200BA111F /* 3-4我的酒店订单.png in Resources */,
+				A89F8F0C186D1353006A48DA /* calendar.html in Resources */,
 				9D5829F3182FC9E6009EB477 /* testOrderList.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

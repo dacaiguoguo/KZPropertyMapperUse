@@ -21,6 +21,7 @@ PODS:
   - MCUIColorUtils (1.0.0)
   - RegexKitLite (4.0)
   - TWSReleaseNotesView (1.1.1)
+  - uiview-frame-helpers (0.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0.3)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - MCUIColorUtils (~> 1.0.0)
   - RegexKitLite (~> 4.0)
   - TWSReleaseNotesView (~> 1.1.1)
+  - uiview-frame-helpers (~> 0.1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e499052cbf3d743e9bb727bb37adb9dc2547ba15
@@ -35,5 +37,6 @@ SPEC CHECKSUMS:
   MCUIColorUtils: 339761b4aedb0c2cfaf8ce1cd441bcceee115ea1
   RegexKitLite: f7af7b4d2b675cd2ec9a4abab6aad6ae1f6499c0
   TWSReleaseNotesView: 05aaf5bb00a7bde90f3b7185f74a5302f3519acd
+  uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390
 
 COCOAPODS: 0.28.0

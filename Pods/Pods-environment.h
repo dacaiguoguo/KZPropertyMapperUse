@@ -72,3 +72,9 @@
 #define COCOAPODS_VERSION_MINOR_TWSReleaseNotesView 1
 #define COCOAPODS_VERSION_PATCH_TWSReleaseNotesView 1
 
+// uiview-frame-helpers
+#define COCOAPODS_POD_AVAILABLE_uiview_frame_helpers
+#define COCOAPODS_VERSION_MAJOR_uiview_frame_helpers 0
+#define COCOAPODS_VERSION_MINOR_uiview_frame_helpers 1
+#define COCOAPODS_VERSION_PATCH_uiview_frame_helpers 1
+
