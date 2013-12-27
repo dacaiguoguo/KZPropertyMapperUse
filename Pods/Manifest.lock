@@ -19,6 +19,7 @@ PODS:
     - AFNetworking/NSURLConnection
   - KZPropertyMapper (2.0)
   - MCUIColorUtils (1.0.0)
+  - RDVCalendarView (1.0.1)
   - RegexKitLite (4.0)
   - TWSReleaseNotesView (1.1.1)
   - uiview-frame-helpers (0.1.1)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0.3)
   - KZPropertyMapper (~> 2.0)
   - MCUIColorUtils (~> 1.0.0)
+  - RDVCalendarView (~> 1.0.1)
   - RegexKitLite (~> 4.0)
   - TWSReleaseNotesView (~> 1.1.1)
   - uiview-frame-helpers (~> 0.1.1)
@@ -35,6 +37,7 @@ SPEC CHECKSUMS:
   AFNetworking: e499052cbf3d743e9bb727bb37adb9dc2547ba15
   KZPropertyMapper: 81c06f0c0760f42731a2b646f93802608d238872
   MCUIColorUtils: 339761b4aedb0c2cfaf8ce1cd441bcceee115ea1
+  RDVCalendarView: 77d544c79d1c488572946600f3b1ad97f840242b
   RegexKitLite: f7af7b4d2b675cd2ec9a4abab6aad6ae1f6499c0
   TWSReleaseNotesView: 05aaf5bb00a7bde90f3b7185f74a5302f3519acd
   uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390

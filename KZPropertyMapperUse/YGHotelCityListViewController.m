@@ -10,6 +10,7 @@
 
 
 @interface YGHotelCityListViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *testCalendarWebView;
 @property (nonatomic, copy) YGCityList *cityList;
 @end
 
@@ -18,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.testCalendarWebView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"calendar" withExtension:@"html"]]];
     [self.requestManager requestHotelCityListWithCompletionBlock:^(YGResponse *responseObject) {
         self.cityList = responseObject.responseObj;
         NSLog(@"%@",self.cityList);

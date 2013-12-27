@@ -60,6 +60,12 @@
 #define COCOAPODS_VERSION_MINOR_MCUIColorUtils 0
 #define COCOAPODS_VERSION_PATCH_MCUIColorUtils 0
 
+// RDVCalendarView
+#define COCOAPODS_POD_AVAILABLE_RDVCalendarView
+#define COCOAPODS_VERSION_MAJOR_RDVCalendarView 1
+#define COCOAPODS_VERSION_MINOR_RDVCalendarView 0
+#define COCOAPODS_VERSION_PATCH_RDVCalendarView 1
+
 // RegexKitLite
 #define COCOAPODS_POD_AVAILABLE_RegexKitLite
 #define COCOAPODS_VERSION_MAJOR_RegexKitLite 4
